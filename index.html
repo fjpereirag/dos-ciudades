@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="es" data-variant="pastoral" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dos ciudades · De Babel a la nueva Jerusalén</title>
+<meta name="description" content="Un itinerario bíblico en doce pasos: la ciudad de los hombres que quiere llegar al cielo y la ciudad de Dios que baja del cielo. De Babel a la nueva Jerusalén.">
+<meta name="theme-color" content="#F6EFE3">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dos ciudades · De Babel a la nueva Jerusalén">
+<meta property="og:description" content="Babel quería subir al cielo; la nueva Jerusalén baja del cielo. Doce pasos por la Biblia, con una pregunta para la oración.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="modulepreload" href="js/three.module.min.js">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#prologo">Saltar al contenido</a>
+
+<div class="stage" aria-hidden="true">
+  <canvas id="escena3d"></canvas>
+  <div class="stage__fallback">
+    <svg viewBox="0 0 400 240" class="templo-svg">
+      <g fill="none" stroke-width="1.2">
+        <path d="M60 210 V180 H76 V160 H92 V140 H108 V120 H124 V140 H140 V160 H156 V180 H172 V210" stroke="#5aa7b3"/>
+        <path d="M230 210 V176 H246 V168 H262 V176 H300 V168 H316 V176 H354 V168 H370 V176 V210" stroke="#C9A35B"/>
+        <path d="M20 210 H380" stroke="#C9A35B"/>
+      </g>
+      <g fill="#C9A35B"><circle cx="254" cy="160" r="3"/><circle cx="308" cy="160" r="3"/><circle cx="362" cy="160" r="3"/></g>
+    </svg>
+  </div>
+  <div class="stage__veil"></div>
+</div>
+
+<header class="top">
+  <a class="top__brand" href="#inicio">Dos ciudades</a>
+  <button class="top__btn" type="button" aria-expanded="false" aria-controls="menu"><span class="top__cur" id="actual">Índice</span><i aria-hidden="true"></i></button>
+  <nav class="top__nav" id="menu" aria-label="Índice" hidden>
+    <p class="top__grp">Las dos ciudades</p>
+    <ol>
+        <li><a href="#paso-1" data-dot="1"><span class="rn">1</span><span class="nm">Babel</span></a></li>
+        <li><a href="#paso-2" data-dot="2"><span class="rn">2</span><span class="nm">Abrahán</span></a></li>
+        <li><a href="#paso-3" data-dot="3"><span class="rn">3</span><span class="nm">Salem</span></a></li>
+        <li><a href="#paso-4" data-dot="4"><span class="rn">4</span><span class="nm">David</span></a></li>
+        <li><a href="#paso-5" data-dot="5"><span class="rn">5</span><span class="nm">El templo</span></a></li>
+    </ol>
+    <p class="top__grp">Babel dentro de Jerusalén</p>
+    <ol>
+        <li><a href="#paso-6" data-dot="6"><span class="rn">6</span><span class="nm">Babilonia</span></a></li>
+        <li><a href="#paso-7" data-dot="7"><span class="rn">7</span><span class="nm">Nehemías</span></a></li>
+        <li><a href="#paso-8" data-dot="8"><span class="rn">8</span><span class="nm">Jesús llora</span></a></li>
+    </ol>
+    <p class="top__grp">La ciudad nueva</p>
+    <ol>
+        <li><a href="#paso-9" data-dot="9"><span class="rn">9</span><span class="nm">La cruz</span></a></li>
+        <li><a href="#paso-10" data-dot="10"><span class="rn">10</span><span class="nm">Pentecostés</span></a></li>
+        <li><a href="#paso-11" data-dot="11"><span class="rn">11</span><span class="nm">Babilonia cae</span></a></li>
+        <li><a href="#paso-12" data-dot="12"><span class="rn">12</span><span class="nm">La nueva Jerusalén</span></a></li>
+    </ol>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio" data-cam="over">
+    <p class="eyebrow reveal">Un itinerario bíblico en doce pasos</p>
+    <h1 class="hero__title hero__title--2"><span class="line"><span>Dos ciudades</span></span><span class="line"><span><em>de Babel a la nueva Jerusalén</em></span></span></h1>
+    <p class="hero__sub reveal">Una quiere subir al cielo. La otra baja del cielo.</p>
+    <a class="hero__cue" href="#prologo"><span>Empieza aquí</span><i></i></a>
+  </section>
+
+  <section class="prologo" id="prologo" data-cam="over">
+    <div class="prologo__inner">
+      <p class="cap reveal"><span class="drop">L</span>a Biblia empieza con una ciudad que quiere llegar al cielo, Babel, y termina con una ciudad que baja del cielo, la nueva Jerusalén. Entre una y otra se cuenta toda la historia de la salvación.</p>
+      <p class="reveal">San Agustín lo resumió en una frase célebre: dos amores fundaron dos ciudades. El amor de sí hasta el desprecio de Dios levantó la ciudad terrena; el amor de Dios hasta el desprecio de sí, la ciudad celestial. Las dos crecen mezcladas, en el mundo y dentro de cada corazón.</p>
+      <p class="reveal">Mientras bajas, en la escena se levantan las dos ciudades: la torre de Babel a la derecha y Jerusalén a la izquierda, que se construye, cae, se reconstruye y al final se llena de luz.</p>
+      <p class="reveal muted">Doce pasos por la Escritura. En cada uno, un texto, una palabra para el eco y una pregunta para quedarte un rato en silencio.</p>
+    </div>
+  </section>
+
+  <!-- Paso 1 -->
+  <section class="etapa" id="paso-1" data-cam="s1" data-n="1">
+    <div class="etapa__head">
+      <span class="etapa__rn">1</span>
+      <p class="etapa__lugar">Babel</p>
+      <p class="etapa__hint">Génesis 11</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 1 · La ciudad que quiere llegar al cielo</p>
+      <h2 class="panel__title">Hagámonos un nombre</h2>
+      <p>Al principio de la Biblia, los hombres tienen una sola lengua y un proyecto: construir una ciudad y una torre que llegue hasta el cielo, «para hacernos un nombre». Ladrillo sobre ladrillo, todos iguales.</p>
+      <p>No es la técnica lo que está mal. Lo que falla es el corazón del proyecto: ocupar el lugar de Dios, no dispersarse, no depender de nadie. Una unidad que no nace del amor sino del miedo y del orgullo.</p>
+      <p>Dios baja a ver la torre, tan alta que hay que bajar para verla, y confunde su lengua. La ciudad queda a medias. Babel es la primera ciudad de la Biblia, y su nombre se queda para siempre como imagen de todo poder que se cierra sobre sí mismo.</p>
+      <blockquote class="cita">
+        <p>«Vamos a construir una ciudad y una torre que alcance el cielo, para hacernos un nombre».</p>
+        <cite>Génesis 11, 4</cite>
+      </blockquote>
+      <p class="eco">«Si el Señor no construye la casa, en vano se cansan los albañiles». <cite>Salmo 127, 1</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Qué torre estoy levantando para «hacerme un nombre»? ¿Dónde busco seguridad sin contar con Dios?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Génesis+11%3A1-9&amp;version=BLP" target="_blank" rel="noopener">Leer Génesis 11, 1-9</a>
+        <button class="btn btn--ghost" data-share="1" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«El Señor los dispersó de allí por la superficie de toda la tierra».<cite>Génesis 11, 8</cite></p></div>
+
+  <!-- Paso 2 -->
+  <section class="etapa" id="paso-2" data-cam="s2" data-n="2">
+    <div class="etapa__head">
+      <span class="etapa__rn">2</span>
+      <p class="etapa__lugar">Abrahán</p>
+      <p class="etapa__hint">Génesis 12</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 2 · Salir de la ciudad</p>
+      <h2 class="panel__title">Sal de tu tierra</h2>
+      <p>Justo después de Babel, Dios llama a un hombre de Ur de los caldeos, la tierra de las grandes torres. A Abrán no le pide que construya, sino que salga.</p>
+      <p>Lo que en Babel querían conquistar —un nombre grande, un pueblo unido— Dios se lo promete a Abrán como regalo: «Haré famoso tu nombre». La diferencia está en el camino: no subir por fuerza, sino recibir confiando.</p>
+      <p>Abrahán vivirá en tiendas, como peregrino. La carta a los Hebreos dice que esperaba otra ciudad, una que no construyen las manos humanas.</p>
+      <blockquote class="cita">
+        <p>«Sal de tu tierra, de tu patria y de la casa de tu padre, hacia la tierra que te mostraré. Haré de ti una gran nación, te bendeciré, haré famoso tu nombre».</p>
+        <cite>Génesis 12, 1-2</cite>
+      </blockquote>
+      <p class="eco">«Esperaba la ciudad de sólidos cimientos cuyo arquitecto y constructor iba a ser Dios». <cite>Hebreos 11, 10</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿De qué «Babel» me pide Dios que salga? ¿Me fío de lo que Él me promete, o prefiero construirlo yo?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Génesis+12%3A1-9&amp;version=BLP" target="_blank" rel="noopener">Leer Génesis 12, 1-9</a>
+        <button class="btn btn--ghost" data-share="2" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Abrán marchó, como le había dicho el Señor».<cite>Génesis 12, 4</cite></p></div>
+
+  <!-- Paso 3 -->
+  <section class="etapa" id="paso-3" data-cam="s3" data-n="3">
+    <div class="etapa__head">
+      <span class="etapa__rn">3</span>
+      <p class="etapa__lugar">Salem</p>
+      <p class="etapa__hint">Génesis 14</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 3 · Un rey de paz</p>
+      <h2 class="panel__title">Pan y vino en Salem</h2>
+      <p>En el camino, Abrahán se encuentra con un misterioso rey de Salem, que significa «paz»: Melquisedec, sacerdote del Dios altísimo. Sale a su encuentro con pan y vino y lo bendice.</p>
+      <p>Salem es el nombre antiguo de Jerusalén. La primera vez que la ciudad aparece en la Biblia no hay torres ni ejércitos: hay una mesa, una bendición y una ofrenda de pan y vino.</p>
+      <p>La Iglesia ha visto siempre en Melquisedec una figura de Cristo, sacerdote para siempre, y en su ofrenda un anuncio de la Eucaristía.</p>
+      <blockquote class="cita">
+        <p>«Melquisedec, rey de Salem, sacó pan y vino; era sacerdote del Dios altísimo. Y lo bendijo».</p>
+        <cite>Génesis 14, 18-19</cite>
+      </blockquote>
+      <p class="eco">«Tú eres sacerdote eterno según el rito de Melquisedec». <cite>Salmo 110, 4</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Mi mesa es lugar de bendición y de paz? ¿Qué lugar tiene la Eucaristía en mi semana?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Génesis+14%3A17-24&amp;version=BLP" target="_blank" rel="noopener">Leer Génesis 14, 17-24</a>
+        <button class="btn btn--ghost" data-share="3" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Pedid la paz para Jerusalén: vivan seguros los que te aman».<cite>Salmo 122, 6</cite></p></div>
+
+  <!-- Paso 4 -->
+  <section class="etapa" id="paso-4" data-cam="s4" data-n="4">
+    <div class="etapa__head">
+      <span class="etapa__rn">4</span>
+      <p class="etapa__lugar">David</p>
+      <p class="etapa__hint">2 Samuel 5-6</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 4 · La ciudad de David</p>
+      <h2 class="panel__title">Sion, la ciudad elegida</h2>
+      <p>Siglos después, David conquista la fortaleza de Sion, una pequeña ciudad en lo alto de un monte, y la hace capital de las tribus de Israel: la ciudad de David.</p>
+      <p>Lo más importante no es la conquista, sino lo que lleva allí: el arca de la alianza, el signo de la presencia de Dios. David baila delante del arca con todas sus fuerzas, sin importarle el ridículo.</p>
+      <p>Jerusalén se convierte así en la ciudad donde Dios habita en medio de su pueblo. No por su grandeza, que no la tenía, sino porque Dios la eligió.</p>
+      <blockquote class="cita">
+        <p>«David y toda la casa de Israel subían el arca del Señor entre gritos de júbilo y al sonido de las trompetas».</p>
+        <cite>2 Samuel 6, 15</cite>
+      </blockquote>
+      <p class="eco">«El Señor ha elegido a Sion, ha deseado vivir en ella». <cite>Salmo 132, 13</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Dejo que Dios habite en el centro de mi vida, o lo tengo en las afueras? ¿Cuándo fue la última vez que lo alabé con alegría?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=2+Samuel+6%3A12-19&amp;version=BLP" target="_blank" rel="noopener">Leer 2 Samuel 6, 12-19</a>
+        <button class="btn btn--ghost" data-share="4" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Qué deseables son tus moradas, Señor del universo».<cite>Salmo 84, 2</cite></p></div>
+
+  <!-- Paso 5 -->
+  <section class="etapa" id="paso-5" data-cam="s5" data-n="5">
+    <div class="etapa__head">
+      <span class="etapa__rn">5</span>
+      <p class="etapa__lugar">El templo</p>
+      <p class="etapa__hint">1 Reyes 8</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 5 · Una casa para Dios</p>
+      <h2 class="panel__title">Los cielos no pueden contenerte</h2>
+      <p>Salomón construye el templo de Jerusalén, la obra más hermosa del pueblo. Si Babel quería subir al cielo, el templo es el lugar donde el cielo baja a la tierra.</p>
+      <p>En la dedicación, Salomón reza con una lucidez sorprendente: ni los cielos pueden contener a Dios, ¡cuánto menos esta casa! El templo no encierra a Dios; es una puerta abierta a la oración de todos, también del extranjero.</p>
+      <p>Ahí está la diferencia entre las dos ciudades: Babel construye para alcanzar a Dios; Jerusalén construye para acoger a Dios, que baja.</p>
+      <blockquote class="cita">
+        <p>«¿Es posible que Dios habite en la tierra? Si los cielos y lo más alto de los cielos no pueden contenerte, ¡cuánto menos esta casa que te he construido!».</p>
+        <cite>1 Reyes 8, 27</cite>
+      </blockquote>
+      <p class="eco">«Mi casa será casa de oración para todos los pueblos». <cite>Isaías 56, 7</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Mi oración intenta «subir» a Dios a fuerza de méritos, o acoge al Dios que baja? ¿Mi parroquia es casa abierta para todos?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=1+Reyes+8%3A22-30&amp;version=BLP" target="_blank" rel="noopener">Leer 1 Reyes 8, 22-30</a>
+        <button class="btn btn--ghost" data-share="5" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Este pueblo me honra con los labios, pero su corazón está lejos de mí».<cite>Isaías 29, 13</cite></p></div>
+
+  <!-- Paso 6 -->
+  <section class="etapa" id="paso-6" data-cam="s6" data-n="6">
+    <div class="etapa__head">
+      <span class="etapa__rn">6</span>
+      <p class="etapa__lugar">Babilonia</p>
+      <p class="etapa__hint">2 Reyes 25</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 6 · Cuando Jerusalén se vuelve Babel</p>
+      <h2 class="panel__title">La ciudad en llamas</h2>
+      <p>Con los años, Jerusalén se parece cada vez más a Babel: confía en alianzas y ejércitos, oprime al pobre y repite «el templo del Señor» como un amuleto. Los profetas lo denuncian.</p>
+      <p>En el año 587 antes de Cristo, Babilonia —la heredera de Babel— arrasa Jerusalén. El templo arde, la muralla cae y el pueblo es llevado al destierro.</p>
+      <p>La lección es dura: Babel no está solo fuera. Cualquier ciudad, también la ciudad de Dios, puede convertirse en Babel cuando se olvida de Él y del pobre.</p>
+      <blockquote class="cita">
+        <p>«Los caldeos incendiaron el templo, el palacio real y las casas de Jerusalén […] y derribaron las murallas que rodeaban Jerusalén».</p>
+        <cite>2 Reyes 25, 9-10</cite>
+      </blockquote>
+      <p class="eco">«Junto a los canales de Babilonia nos sentamos a llorar con nostalgia de Sion». <cite>Salmo 137, 1</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿En qué se parece mi vida, o mi comunidad, a Babel? ¿Qué «templo» uso como amuleto en lugar de convertirme?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Jeremías+7%3A1-15&amp;version=BLP" target="_blank" rel="noopener">Leer Jeremías 7, 1-15</a>
+        <button class="btn btn--ghost" data-share="6" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Cuando el Señor hizo volver a los cautivos de Sion, nos parecía soñar».<cite>Salmo 126, 1</cite></p></div>
+
+  <!-- Paso 7 -->
+  <section class="etapa" id="paso-7" data-cam="s7" data-n="7">
+    <div class="etapa__head">
+      <span class="etapa__rn">7</span>
+      <p class="etapa__lugar">Nehemías</p>
+      <p class="etapa__hint">Nehemías 2-6</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 7 · Reconstruir entre todos</p>
+      <h2 class="panel__title">¡Levantémonos y construyamos!</h2>
+      <p>Tras el destierro, un grupo vuelve a Jerusalén. Nehemías, que servía al rey de Persia, se entera de que la muralla sigue en ruinas. Llora, reza, pide permiso y se pone en camino.</p>
+      <p>La reconstrucción es lo contrario de Babel. No hay un gran proyecto para hacerse un nombre, sino familias que levantan cada una el tramo que tiene delante de su casa. Y lo primero es rezar y escuchar la Palabra.</p>
+      <p>La muralla se termina en cincuenta y dos días. No por la fuerza de nadie, sino porque «esta obra era de nuestro Dios».</p>
+      <blockquote class="cita">
+        <p>«¡Levantémonos y construyamos!».</p>
+        <cite>Nehemías 2, 18</cite>
+      </blockquote>
+      <p class="eco">«Todos nuestros enemigos […] comprendieron que esta obra era de nuestro Dios». <cite>Nehemías 6, 16</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Cuál es «mi tramo» de muralla, lo que me toca levantar delante de mi casa? ¿Construyo con otros o solo?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Nehemías+2%3A11-20&amp;version=BLP" target="_blank" rel="noopener">Leer Nehemías 2, 11-20</a>
+        <button class="btn btn--ghost" data-share="7" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Bendito el que viene en nombre del Señor».<cite>Lucas 19, 38</cite></p></div>
+
+  <!-- Paso 8 -->
+  <section class="etapa" id="paso-8" data-cam="s8" data-n="8">
+    <div class="etapa__head">
+      <span class="etapa__rn">8</span>
+      <p class="etapa__lugar">Jesús llora</p>
+      <p class="etapa__hint">Lucas 19</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 8 · La mirada de Jesús sobre la ciudad</p>
+      <h2 class="panel__title">Si reconocieras lo que lleva a la paz</h2>
+      <p>Jesús sube a Jerusalén. Desde el monte de los Olivos ve la ciudad entera, con el templo reluciente, y se echa a llorar.</p>
+      <p>Jerusalén significa «ciudad de la paz», pero no ha reconocido al que trae la paz. Jesús no la condena desde fuera: la llora como se llora a un hijo.</p>
+      <p>Así mira Dios nuestras ciudades: con lágrimas, no con desprecio. Y desde esa mirada nace la llamada a convertirnos.</p>
+      <blockquote class="cita">
+        <p>«Al acercarse y ver la ciudad, lloró sobre ella, mientras decía: “¡Si reconocieras tú también en este día lo que conduce a la paz!”».</p>
+        <cite>Lucas 19, 41-42</cite>
+      </blockquote>
+      <p class="eco">«¡Jerusalén, Jerusalén […]! ¡Cuántas veces quise reunir a tus hijos, como la gallina reúne a sus pollitos bajo las alas!». <cite>Mateo 23, 37</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Miro mi barrio y mi ciudad con los ojos de Jesús, con lágrimas y no con desprecio? ¿Qué es lo que «conduce a la paz» que no estoy reconociendo?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Lucas+19%3A41-44&amp;version=BLP" target="_blank" rel="noopener">Leer Lucas 19, 41-44</a>
+        <button class="btn btn--ghost" data-share="8" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Donde está el Espíritu del Señor, hay libertad».<cite>2 Corintios 3, 17</cite></p></div>
+
+  <!-- Paso 9 -->
+  <section class="etapa" id="paso-9" data-cam="s9" data-n="9">
+    <div class="etapa__head">
+      <span class="etapa__rn">9</span>
+      <p class="etapa__lugar">La cruz</p>
+      <p class="etapa__hint">Hebreos 13</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 9 · Fuera de la ciudad</p>
+      <h2 class="panel__title">Salgamos a su encuentro fuera del campamento</h2>
+      <p>Jesús muere fuera de las murallas de Jerusalén, en el lugar de los excluidos. La ciudad santa expulsa a su rey.</p>
+      <p>Pero en esa cruz, levantada fuera de la ciudad, Dios hace algo nuevo. Babel quería subir al cielo; en la cruz, el cielo baja hasta lo más bajo. El templo verdadero ya no es un edificio, sino el cuerpo de Cristo, destruido y resucitado.</p>
+      <p>Por eso los cristianos no tenemos aquí una ciudad permanente. Buscamos la futura, y la buscamos saliendo, como Jesús, hacia las afueras.</p>
+      <blockquote class="cita">
+        <p>«Jesús, para santificar al pueblo con su propia sangre, padeció fuera de la puerta. Salgamos, pues, a su encuentro fuera del campamento, cargados con su oprobio; que no tenemos aquí ciudad permanente, sino que andamos en busca de la futura».</p>
+        <cite>Hebreos 13, 12-14</cite>
+      </blockquote>
+      <p class="eco">«Destruid este templo, y en tres días lo levantaré». <cite>Juan 2, 19</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Quiénes están hoy «fuera de la puerta» en mi ciudad? ¿Salgo a su encuentro o me quedo dentro de mis murallas?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Hebreos+13%3A11-16&amp;version=BLP" target="_blank" rel="noopener">Leer Hebreos 13, 11-16</a>
+        <button class="btn btn--ghost" data-share="9" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Ya no sois extranjeros ni forasteros, sino conciudadanos de los santos y miembros de la familia de Dios».<cite>Efesios 2, 19</cite></p></div>
+
+  <!-- Paso 10 -->
+  <section class="etapa" id="paso-10" data-cam="s10" data-n="10">
+    <div class="etapa__head">
+      <span class="etapa__rn">10</span>
+      <p class="etapa__lugar">Pentecostés</p>
+      <p class="etapa__hint">Hechos 2</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 10 · Babel al revés</p>
+      <h2 class="panel__title">Cada uno los oía hablar en su propia lengua</h2>
+      <p>Cincuenta días después de la Pascua, en Jerusalén, el Espíritu Santo baja sobre los discípulos como lenguas de fuego. Hay judíos de todas las naciones, y cada uno los oye hablar en su propia lengua.</p>
+      <p>Es Babel al revés. En Babel, una sola lengua impuesta acabó en confusión y dispersión. En Pentecostés, muchas lenguas se entienden sin dejar de ser distintas. La unidad no es uniformidad: es comunión.</p>
+      <p>Así nace la Iglesia, la nueva Jerusalén en camino: un pueblo de todos los pueblos, unido por el Espíritu y no por la fuerza.</p>
+      <blockquote class="cita">
+        <p>«Todos quedaron llenos del Espíritu Santo y empezaron a hablar en otras lenguas, según el Espíritu les concedía manifestarse».</p>
+        <cite>Hechos 2, 4</cite>
+      </blockquote>
+      <p class="eco">«Cada uno los oía hablar en su propia lengua». <cite>Hechos 2, 6</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Busco la unidad imponiendo mi manera de ver, o escuchando la lengua del otro? ¿Mi comunidad es un lugar donde caben todos los pueblos?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Hechos+2%3A1-13&amp;version=BLP" target="_blank" rel="noopener">Leer Hechos 2, 1-13</a>
+        <button class="btn btn--ghost" data-share="10" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Nosotros, en cambio, somos ciudadanos del cielo».<cite>Filipenses 3, 20</cite></p></div>
+
+  <!-- Paso 11 -->
+  <section class="etapa" id="paso-11" data-cam="s11" data-n="11">
+    <div class="etapa__head">
+      <span class="etapa__rn">11</span>
+      <p class="etapa__lugar">Babilonia cae</p>
+      <p class="etapa__hint">Apocalipsis 18</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 11 · El final de Babel</p>
+      <h2 class="panel__title">Salid de ella, pueblo mío</h2>
+      <p>En el Apocalipsis, Babel reaparece por última vez: «Babilonia la grande», la ciudad del lujo, del comercio sin alma y del poder que trafica hasta con «vidas humanas». Para los primeros cristianos era Roma; para nosotros, toda civilización que se adora a sí misma.</p>
+      <p>Su caída es repentina: en una sola hora se derrumba todo. Los mercaderes lloran porque ya nadie compra sus mercancías.</p>
+      <p>Y una voz del cielo dice: «Salid de ella, pueblo mío». No es huir del mundo, sino no dejarse atrapar por su lógica.</p>
+      <blockquote class="cita">
+        <p>«Salid de ella, pueblo mío, para que no os hagáis cómplices de sus pecados».</p>
+        <cite>Apocalipsis 18, 4</cite>
+      </blockquote>
+      <p class="eco">«¡Cayó, cayó Babilonia la grande!». <cite>Apocalipsis 18, 2</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Qué lógica de Babilonia —consumir, acumular, aparentar, dominar— tengo metida dentro? ¿De qué tendría que «salir»?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Apocalipsis+18%3A1-8&amp;version=BLP" target="_blank" rel="noopener">Leer Apocalipsis 18, 1-8</a>
+        <button class="btn btn--ghost" data-share="11" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+  <div class="tramo" data-cam="travel"><p class="reveal">«Amén. ¡Ven, Señor Jesús!».<cite>Apocalipsis 22, 20</cite></p></div>
+
+  <!-- Paso 12 -->
+  <section class="etapa" id="paso-12" data-cam="s12" data-n="12">
+    <div class="etapa__head">
+      <span class="etapa__rn">12</span>
+      <p class="etapa__lugar">La nueva Jerusalén</p>
+      <p class="etapa__hint">Apocalipsis 21-22</p>
+    </div>
+    <article class="panel">
+      <p class="panel__kicker">Paso 12 · La ciudad que baja del cielo</p>
+      <h2 class="panel__title">Mirad, hago nuevas todas las cosas</h2>
+      <p>Al final de la Biblia, la historia de las dos ciudades se resuelve. Babel quería subir al cielo; la nueva Jerusalén baja del cielo, de junto a Dios, preparada como una novia.</p>
+      <p>En ella no hay templo, porque Dios mismo es su templo. Sus puertas no se cierran nunca, y a ella llevan los pueblos su gloria. En medio corre el río del agua de la vida y crece el árbol cuyas hojas curan a las naciones.</p>
+      <p>Es la ciudad que esperaba Abrahán, la que lloraba Jesús, la que el Espíritu empezó a construir en Pentecostés. No la conquistamos: la recibimos. Pero ya ahora podemos vivir como ciudadanos suyos.</p>
+      <blockquote class="cita">
+        <p>«Y vi la ciudad santa, la nueva Jerusalén, que descendía del cielo, de parte de Dios, preparada como una esposa que se ha adornado para su esposo».</p>
+        <cite>Apocalipsis 21, 2</cite>
+      </blockquote>
+      <p class="eco">«Esta es la morada de Dios con los hombres: acampará entre ellos y ellos serán su pueblo». <cite>Apocalipsis 21, 3</cite></p>
+      <div class="pausa">
+        <p class="pausa__label">Para la oración</p>
+        <p class="pausa__q">¿Vivo ya como ciudadano de la nueva Jerusalén? ¿Qué puedo hacer esta semana para que mi barrio se parezca un poco más a ella?</p>
+      </div>
+      <div class="acciones">
+        <a class="btn" href="https://www.biblegateway.com/passage/?search=Apocalipsis+21%3A1-7&amp;version=BLP" target="_blank" rel="noopener">Leer Apocalipsis 21, 1-7</a>
+        <button class="btn btn--ghost" data-share="12" type="button">Compartir por WhatsApp</button>
+      </div>
+    </article>
+  </section>
+
+  <section class="final" id="final" data-cam="final">
+    <div class="final__inner">
+      <p class="eyebrow reveal">Y ahora, tú</p>
+      <h2 class="final__title reveal">¿Qué ciudad construyes?</h2>
+      <p class="reveal">Babel y Jerusalén no son solo dos ciudades del pasado. Son dos maneras de vivir. Babel es construir para hacerse un nombre, con una sola lengua impuesta y sin Dios. Jerusalén es recibir la ciudad como un don y levantarla entre todos, cada uno su tramo, con Dios en el centro y las puertas abiertas.</p>
+      <p class="final__pregunta reveal">¿Qué ciudad estás construyendo hoy con tu vida?</p>
+      <blockquote class="cita cita--final reveal"><p>«Dos amores fundaron dos ciudades: el amor de sí hasta el desprecio de Dios, la terrena; el amor de Dios hasta el desprecio de sí, la celestial».</p><cite>San Agustín, La ciudad de Dios XIV, 28</cite></blockquote>
+      <div class="final__indices">
+        <p class="final__grp">Los doce pasos</p>
+        <ol class="final__index">
+          <li><a href="#paso-1"><span class="rn">1</span> <span class="nm">Babel</span><em>Hagámonos un nombre</em></a></li>
+          <li><a href="#paso-2"><span class="rn">2</span> <span class="nm">Abrahán</span><em>Sal de tu tierra</em></a></li>
+          <li><a href="#paso-3"><span class="rn">3</span> <span class="nm">Salem</span><em>Pan y vino en Salem</em></a></li>
+          <li><a href="#paso-4"><span class="rn">4</span> <span class="nm">David</span><em>Sion, la ciudad elegida</em></a></li>
+          <li><a href="#paso-5"><span class="rn">5</span> <span class="nm">El templo</span><em>Los cielos no pueden contenerte</em></a></li>
+          <li><a href="#paso-6"><span class="rn">6</span> <span class="nm">Babilonia</span><em>La ciudad en llamas</em></a></li>
+          <li><a href="#paso-7"><span class="rn">7</span> <span class="nm">Nehemías</span><em>¡Levantémonos y construyamos!</em></a></li>
+          <li><a href="#paso-8"><span class="rn">8</span> <span class="nm">Jesús llora</span><em>Si reconocieras lo que lleva a la paz</em></a></li>
+          <li><a href="#paso-9"><span class="rn">9</span> <span class="nm">La cruz</span><em>Salgamos a su encuentro fuera del campamento</em></a></li>
+          <li><a href="#paso-10"><span class="rn">10</span> <span class="nm">Pentecostés</span><em>Cada uno los oía hablar en su propia lengua</em></a></li>
+          <li><a href="#paso-11"><span class="rn">11</span> <span class="nm">Babilonia cae</span><em>Salid de ella, pueblo mío</em></a></li>
+          <li><a href="#paso-12"><span class="rn">12</span> <span class="nm">La nueva Jerusalén</span><em>Mirad, hago nuevas todas las cosas</em></a></li>
+        </ol>
+      </div>
+      <div class="acciones acciones--center">
+        <button class="btn" data-share="0" type="button">Compartir por WhatsApp</button>
+        <a class="btn btn--ghost" href="#inicio">Volver al inicio</a>
+      </div>
+      <p class="muted reveal">Para seguir: <a href="../el-destierro/">El destierro y la vuelta</a> · <a href="../babel-jerusalen/">Babel o Jerusalén (Magnifica humanitas)</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <p>Itinerario bíblico de oración sobre las dos ciudades de la Escritura. Textos bíblicos: Sagrada Biblia, versión oficial de la Conferencia Episcopal Española. Cita de san Agustín: <em>De civitate Dei</em> XIV, 28.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
